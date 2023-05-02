@@ -1,0 +1,115 @@
+<mat-drawer-container class="example-container" autosize>
+  
+    <mat-drawer #drawer class="example-sidenav" mode="over">
+      <div fxLayout="column">       
+        <div class="menu">
+
+          <a class="menuItem" routerLink="/pages/home">
+            <div class="menuItem" fxLayout="row">
+              <mat-icon>home</mat-icon>
+              <p>Home</p>
+            </div>
+          </a>
+
+          <mat-divider></mat-divider>
+
+          <a class="menuItem" routerLink="/pages/profile" *ngIf="user == 'C'">
+            <div class="menuItem" fxLayout="row">
+              <mat-icon>person</mat-icon>
+              <p>Perfil</p>
+            </div>
+          </a>
+
+          <mat-divider *ngIf="user == 'C'"></mat-divider>
+
+          <a class="menuItem" routerLink="/pages/solicitacoes" *ngIf="user == 'G'">
+            <div class="menuItem" fxLayout="row">
+              <mat-icon>description</mat-icon>
+              <p>Solicitações</p>
+            </div>
+          </a>
+
+          <mat-divider *ngIf="user == 'G'"></mat-divider>
+
+          <a class="menuItem" routerLink="/pages/voluntarios" *ngIf="user == 'G'">
+            <div class="menuItem" fxLayout="row">
+              <mat-icon>person</mat-icon>
+              <p>Voluntários</p>
+            </div>
+          </a>
+
+          <mat-divider *ngIf="user == 'G'"></mat-divider>
+
+          <a class="menuItem" routerLink="/pages/projetos" *ngIf="user == 'G'">
+            <div class="menuItem" fxLayout="row">
+              <mat-icon>work</mat-icon>
+              <p>Projetos</p>
+            </div>
+          </a>
+
+          <mat-divider *ngIf="user == 'G'"></mat-divider>
+
+          <a class="menuItem" routerLink="/pages/projetos" *ngIf="user == 'C'">
+            <div class="menuItem" fxLayout="row">
+              <mat-icon>work</mat-icon>
+              <p>Meus Projetos</p>
+            </div>
+          </a>
+
+          <mat-divider *ngIf="user == 'C'"></mat-divider>
+
+
+          <a class="menuItem" routerLink="/pages/solicitacoes" *ngIf="user == 'C'">
+            <div class="menuItem" fxLayout="row">
+              <mat-icon>description</mat-icon>
+              <p>Minhas Solicitações</p>
+            </div>
+          </a>
+
+          <mat-divider *ngIf="user == 'C'"></mat-divider>
+
+          <mat-expansion-panel class="expandMenuItem" >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>settings</mat-icon> Ações
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+        
+            <a class="menuItem">
+              <div class="menuItem subMenu" fxLayout="row" (click)="exit()">
+                <mat-icon>exit_to_app</mat-icon>
+                <p>Sair</p>
+              </div>
+            </a>
+
+          </mat-expansion-panel>
+
+          <mat-divider></mat-divider>
+
+        </div>
+      </div>
+    </mat-drawer>
+  
+    <div class="main">
+  
+      <mat-toolbar class="toolbar">
+  
+        <div class="mainHeader">
+          <button mat-icon-button class="example-icon" 
+                (click)="drawer.toggle()"
+                aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+          </button>
+          <img src="../../../assets/img/LogoMultiplickersBranco.png" height="40px">
+        </div>
+  
+      </mat-toolbar>
+  
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+      
+      
+    </div>
+  
+  </mat-drawer-container>

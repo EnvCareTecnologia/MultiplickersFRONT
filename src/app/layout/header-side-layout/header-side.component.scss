@@ -1,0 +1,126 @@
+.main{
+    height: 100vh;
+    overflow-y: hidden;
+
+    .mainHeader{
+        display: flex;
+    }
+}
+
+.footer{
+    height: 50px;
+}
+
+//SCROLLBAR
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:none; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.content{
+    padding-left: 50px;
+    padding-right: 50px; 
+    overflow:auto;
+    height: calc(100vh - 60px);
+}
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color:  #13579b;
+    color:white;
+    height: 60px;
+}
+
+::ng-deep .mat-simple-snackbar-action {
+    color: lightgray;
+}
+
+.subMenu{
+    margin-bottom: 15px;
+}
+
+.menuItem{
+    text-decoration: none;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: flex-end;
+    color: white;
+    cursor: pointer;
+
+    p{
+        margin: 0px;
+        margin-left: 5px;
+    }
+}
+
+.expandMenuItem{
+    background: none;
+    box-shadow: none !important;
+    padding-right: 10px;
+
+    p{
+        font-size: 15px;
+    }
+
+    .menuItem{
+        padding: 0px;
+    }
+
+    .mat-expansion-indicator{
+        color: white;
+    }
+
+    mat-panel-title{
+        color: white;
+
+        mat-icon{
+            margin-right: 5px;
+        }
+    }
+}
+
+mat-expansion-panel-header{
+    padding: 0px;
+}
+
+mat-expansion-panel-header:hover{
+    background: none;
+    background-color: none;
+}
+
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-sidenav {
+    padding-left: 20px;
+    width: 300px;
+    background-color:  #13579b;
+    
+}

@@ -1,0 +1,50 @@
+.body{
+
+    .foto{
+        display: flex;
+        justify-content: center;
+
+        img{
+            margin: 20px;
+        }
+    }
+
+    .info{
+        margin: 20px;
+    }
+
+    .profileHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .profileOptions{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .line{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+
+        .lineHeader{
+            font-size: 25px;
+        }
+    }
+
+    .enter{
+        background-color: #13579b;
+        height: 50px;
+        width: min-content;
+        margin: 10px;
+    }
+}

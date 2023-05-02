@@ -1,0 +1,165 @@
+.bigText{
+    color:white;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.body{
+    display: flex;
+    text-align: -webkit-center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+
+    scroll-behavior: smooth;
+
+    .pages{
+        min-height: 100vh;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .header{
+        width: -webkit-fill-available;
+        height: 60px;
+        top: 0;
+        position: absolute;
+        background-color: #003366;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img{
+            height: 100%;
+        }
+
+        .menuItems{
+            display: flex;
+            align-items: center;
+
+            span{
+                color: white;
+                font-size: 20px;
+                margin: 10px;
+            }
+
+            a{
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .firstPage{
+        background-color: #13579b;
+        padding-top: 60px;
+
+        .content{
+            display: flex;
+            text-align: -webkit-center;
+            flex-direction: row;
+            width: -webkit-fill-available;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+    }
+    
+    .secondPage{
+        padding: 20px;
+        background-color: #13579b;
+
+        .aboutText{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+            span{
+                align-items: flex-start;
+                text-align: justify;
+                color: white;
+            }
+
+            .aboutTitle{
+                font-size: 40px;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            .aboutBody{
+                font-size: 20px;
+            }
+        }
+
+        
+    }
+
+    .thirdPage{
+        padding-top: 20px;
+        background-color: #13579b;
+
+        .cadastroForm{
+            color: white;
+            padding: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+            .enter{
+                background-color: #003366;
+            }
+        }
+    }
+
+    .footerPage{
+        min-height: 50vh;
+        padding-top: 20px;
+        background-color: white;
+    }
+
+    .menu{
+        width: 450px;
+        
+        img{
+            margin-top: 15px;
+        }
+
+        h1{
+            margin-top: 5px;
+        }
+    }
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: white;
+}
+
+.mat-form-field{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.competencias{
+    display: flex;
+    flex-wrap: wrap;
+    .example-margin{
+        margin: 10px;
+    }
+}
+
+.btEnter{
+    background-color: #003366;
+    color: white;
+}

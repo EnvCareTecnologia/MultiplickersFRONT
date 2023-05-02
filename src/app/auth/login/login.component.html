@@ -1,0 +1,46 @@
+<div class="body">
+    <mat-card class="menu" fxLayout="column">
+
+        <mat-card-content fxFlex="100">
+
+            <img src="../../../assets/img/LogoMultiplickers.png" width="100%">
+
+            <form class="auth" fxLayout="column" [formGroup]="loginForm">
+
+                <mat-form-field fxFlex="100" class="example-full-width" appearance="outline">
+                    <mat-label>Login</mat-label>
+                    <input matInput required formControlName="login">
+                    <mat-error>Login é obrigatório</mat-error>
+                </mat-form-field> 
+
+                <mat-form-field fxFlex="100" class="example-full-width" appearance="outline">
+                    <mat-label>Senha</mat-label>
+                    <input type="password" matInput required formControlName="password">
+                    <mat-error>Senha é obrigatório</mat-error>
+                </mat-form-field> 
+
+                <div class="buttons" fxFlex="100"> 
+
+                    <button class="enter" fxFlex="100" (click)="login('C')"
+                            mat-raised-button color="primary">
+                        Entrar
+                    </button>
+
+                </div>
+
+                <div class="buttons" fxFlex="100"> 
+
+                    <button class="enter" fxFlex="100" (click)="login('G')"
+                            mat-raised-button color="primary">
+                        Entrar como Gestor
+                    </button>
+
+                </div>
+                
+            </form>
+
+            <a class="forgot" routerLink="/auth/recovery">Esqueci minha senha</a>
+        </mat-card-content>
+    </mat-card>
+</div>
+    

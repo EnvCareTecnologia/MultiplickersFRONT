@@ -1,0 +1,60 @@
+<div class="body" id="body">
+
+    <div class="header">
+        <div>
+            <a href="/">
+                <img src="../../../assets/img/LogoMultiplickersBranco.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="Home" class="firstPage pages">
+        <div class="content">
+            <span fxFlex="100" class="bigText">Procure um multiplicker!</span>
+            <form class="auth" fxLayout="column" [formGroup]="loginForm">
+
+                <div fxLayout="row">
+                    <mat-form-field fxFlex="100" class="example-full-width" appearance="outline">
+                        <mat-label>Nome</mat-label>
+                        <input matInput required formControlName="nome">
+                        <mat-error>Login é obrigatório</mat-error>
+                    </mat-form-field> 
+                </div>
+                
+                <div fxLayout="row">
+                    <section class="competencias">
+                        <mat-checkbox class="example-margin" >Educação</mat-checkbox>
+                        <mat-checkbox class="example-margin" >Ciências Exatas</mat-checkbox>
+                        <mat-checkbox class="example-margin" >Ciências Humanas</mat-checkbox>
+                        <mat-checkbox class="example-margin" >Gestão de Negócios</mat-checkbox>
+                        <mat-checkbox class="example-margin" >Literatura</mat-checkbox>
+                        <mat-checkbox class="example-margin" >Liderança</mat-checkbox>
+                        <mat-checkbox class="example-margin" >Jornalismo</mat-checkbox>
+                    </section>
+                </div>
+
+                <div class="buttons" fxFlex="100"> 
+
+                    <button class="btEnter" fxFlex="100" (click)="procurar()"
+                            mat-raised-button color="primary">
+                        Buscar
+                    </button>
+    
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <div id="About" class="secondPage pages">
+        <div>
+            
+        </div>
+    </div>
+
+    <mat-card class="menu">
+        <mat-card-content>
+        </mat-card-content>
+    </mat-card>
+</div>
+    
